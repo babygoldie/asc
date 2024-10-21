@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#script to analyse the document
+
+
+
+noofwords=$( wc -w harry.txt )
+
+echo " The number of words ${noofwords} "
+
+noofcharachters=$( wc -c harry.txt )
+
+echo " The number of charachters is ${noofcharachters}"
+
+nooflines=$( wc -l harry.txt )
+
+echo " The number of lines is ${nooflines}"
+
+
+occurences=$( grep -c "Harry" harry.txt )
+
+echo " The nummber of times Harry occurs is ${occurences}"
