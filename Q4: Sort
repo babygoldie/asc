@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#script to print the size of all files
+
+read -p "Enter the directory to sort the files: " directory
+
+
+echo " The below shows the files sorted based on size"
+cd /${directory}
+ls -alS
