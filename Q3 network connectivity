@@ -1,0 +1,17 @@
+#script to check network connectivity
+
+read -p "Enter the ip addresses: " ipadd
+
+
+if [ "$#" -eq 0 ]; then
+    echo "no ip address was entered"
+    exit 1
+fi
+
+for ip in ipadd;do
+    outcome = $( grep -c "error" | curl ${ip} )
+    if [ "$outcome -ne 0"  ]
+        echo " could not connect to ${ip}"
+        continue
+    fi
+done
