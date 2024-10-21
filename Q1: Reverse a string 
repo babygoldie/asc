@@ -1,0 +1,16 @@
+#! /bin/bash
+
+#script to reverse a string
+
+if [ "$#" -eq 0 ]; then
+    echo "no string entered"
+    exit 1
+fi
+
+
+    
+read -p "enter the stirng to be reversed:  " "input" 
+
+reversedstring=$( echo "${input}" | rev )
+
+echo "the reversed string is ${reversedstring} "
